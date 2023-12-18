@@ -4,33 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="compro.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="compro.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
-    <nav class="px-5 fixed-top bg-white">
+    <nav class="px-5-me fixed-top bg-white desktop">
       <img src="bahan/logo-mlaku.png" alt="" />
       <div class="menu d-flex gap-4">
-        <a href="">home</a>
-        <a href="">sect 2</a>
-        <a href="">sect 3</a>
+        <a href="#home" class="aktif item ahome">home</a>
+        <a href="#about" class="item aabout">About</a>
+        <a href="#why" class="item awhy">Why</a>
       </div>
       <div class="masuk d-flex gap-3 align-items-center">
         <span>Login</span>
         <div class="signup">SignUp</div>
       </div>
     </nav>
-    <div class="se1 w-100 px-5 pb-5 vh-100 position-relative">
+
+    <nav class="w-100 mobile bg-white fixed-top flex-column justify-content-center py-2">
+      <div class="max-window w-100 navbar flex-row d-flex justify-content-between align-items-center">
+        <img src="bahan/logo-mlaku.png" alt="" class="logo" width="50px" height="50px" />
+        <img src="bahan/logo-mlaku.png" alt="" class="menu" width="45px" height="40px" />
+      </div>
+      <div class="ditoggle w-100" style="display: none">
+        <div class="toggle-nav w-100 items d-flex flex-column px-4 bg-white mt-4">
+          <a href="#home" class="ahome item aktif" style="padding-left: 20px; padding-right: 20px">Home</a>
+          <a href="#about" class="aabout item" style="padding-left: 20px; padding-right: 20px">About</a>
+          <a href="#why" class="awhy item" style="padding-left: 20px; padding-right: 20px">why</a>
+
+          <div class="login-daftar mt-4">
+            <div class="akun d-flex align-items-center justify-content-end gap-2">
+              <span>Login</span>
+              <div class="signup">SignUp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="home" class="se1 w-100 px-5-me pb-5 vh-100-me position-relative">
       <div class="bg-konten w-100 h-100"></div>
       <div class="position-absolute z-1 d-flex justify-content-between">
-        <div class="d-flex flex-column justify-content-between rounded-5 p-5 hero-parent">
-          <div class="mb-5">
+        <div class="d-flex flex-column justify-content-between rounded-5 p-5-me hero-parent">
+          <div class="mb-5-me">
             <div class="title ff-capriola text-success">Mlaku-Mlaku App</div>
             <div class="sub-title">Cari destinasi wisatamu dan bagikan pengalamanmu</div>
           </div>
           <div class="top-parent mt-3">
             <div class="top-list">Tiga besar wisata minggu ini</div>
-            <div class="kotak-parent d-flex gap-4">
+            <div class="kotak-parent d-flex gap-4 flex-wrap">
               <div class="kotak-list d-flex align-items-end" style="background-image: url(https://source.unsplash.com/random/400×450/?beach)">
                 <div class="tag-name">Pantai Pasir Putih</div>
               </div>
@@ -45,34 +73,89 @@
         </div>
       </div>
     </div>
-    <div class="se2 w-100 d-flex justify-content-center p-5">
+    <div id="about" class="se2 w-100 vh-100-me d-flex justify-content-center p-5-me">
       <div class="max-window w-100 flex-column align-items-center d-flex">
-        <span class="title ff-capriola text-success">Aplikasi Apa Sih Ini?</span>
+        <span class="title ff-capriola">Aplikasi Apa Sih Ini?</span>
 
-        <div class="d-flex flex-wrap align-items-center mt-5 konten">
+        <div class="d-flex flex-wrap align-items-center j mt-5 konten">
           <div class="fungsi-app d-flex flex-column gap-4">
-            <div class="list-fungsi d-flex align-items-center gap-3">
+            <div class="list-fungsi d-flex align-items-center gap-3 p-1">
               <img src="bahan/Hands - Give.png" alt="" />
               <div class="text-fungsi">Sewa Guide untuk perjalanan mu</div>
             </div>
-            <div class="list-fungsi d-flex align-items-center gap-3">
-              <img src="bahan/Hands - Phone.png" alt="" />
+            <div class="list-fungsi d-flex align-items-center gap-3 p-1">
+              <img src="bahan/Nomads - Biking.png" alt="" />
               <div class="text-fungsi">Cari refrensi destinasi mu</div>
             </div>
-            <div class="list-fungsi d-flex align-items-center gap-3">
-              <img src="bahan/Nomads - Biking.png" alt="" />
+            <div class="list-fungsi d-flex align-items-center gap-3 p-1">
+              <img src="bahan/Hands - Phone.png" alt="" />
               <div class="text-fungsi">Share pengalaman liburan mu</div>
             </div>
           </div>
           <div class="app">
-            <img src="bahan/mob1.svg" alt="" />
+            <img src="bahan/iMockup - Google Pixel 8 Pro.webp" alt="" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="se3 p-5 w-100 vh-100 d-flex justify-content-center position-relative">
+    <div id="why" class="se3 p-5-me w-100 d-flex justify-content-center position-relative">
       <div class="bg-white w-100 h-100 position-absolute z-0 opacity-75 top-0"></div>
+      <div class="max-window w-100 flex-column align-items-center d-flex z-1">
+        <span class="title ff-capriola">Mengapa kami membuat aplikasi ini?</span>
+        <div class="sub-title lh-base mt-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil itaque ut quisquam nostrum perferendis, quod, optio ab labore deserunt, minus dolore
+          doloribus quasi obcaecati ratione distinctio tenetur soluta quae? Ipsa magni harum, aperiam provident soluta ad libero tempora voluptate mollitia quam
+          alias? Iure error laudantium dolores minima nesciunt expedita molestiae animi nulla, asperiores, atque quia dolorum inventore facere veritatis magnam
+          fugiat earum blanditiis tempora architecto omnis vitae harum! Ratione explicabo corporis nesciunt molestiae, dolore, sapiente asperiores cum
+          perferendis aspernatur similique porro nobis voluptatem mollitia necessitatibus. Beatae culpa laudantium veniam, vel asperiores explicabo ea iste
+          exercitationem quaerat dolore impedit unde sequi.
+        </div>
+      </div>
     </div>
+
+    <div class="se4 p-5-me w-100 vh-100-me d-flex justify-content-center"></div>
   </body>
 </html>
+
+<script>
+  $(document).on("click", ".menu", function () {
+    $(".ditoggle").fadeToggle("fast");
+    $("nav.mobile").toggleClass("aktif");
+  });
+  $(document).on("click", "nav .items a", function () {
+    // $("nav .items a").removeClass("aktif");
+    // $(this).addClass("aktif");
+  });
+
+  // $(window).scroll(function () {
+  //   let scroll = $(window).scrollTop();
+  //   if (scroll > 10) {
+  //     $("nav").css({ background: "white" });
+  //     $("nav.desktop").addClass("aktif");
+  //   } else {
+  //     $("nav").css({ background: "transparent" });
+  //     $("nav.desktop").removeClass("aktif");
+  //   }
+  // });
+
+  $(window).on("scroll touchmove", function () {
+    $("nav .item").removeClass("aktif");
+    if ($(document).scrollTop() == $(".se1").position().top) {
+      $("nav .item").removeClass("aktif");
+      $(".ahome").addClass("aktif");
+    }
+    if ($(document).scrollTop() > $(".se1").position().top) {
+      $("nav .item").removeClass("aktif");
+      $(".ahome").addClass("aktif");
+    }
+    if ($(document).scrollTop() >= $(".se2").position().top) {
+      $("nav .item").removeClass("aktif");
+      $(".aabout").addClass("aktif");
+    }
+    if ($(document).scrollTop() >= $(".se3").position().top) {
+      $("nav .item").removeClass("aktif");
+      $(".awhy").addClass("aktif");
+    }
+  });
+</script>
